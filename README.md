@@ -5,7 +5,7 @@ In other words,  this function print the content sended to this function to the 
 
 # Why reprogramming it?
 Reprogramming a function allows you to fully understand how it work, how it manage errors and how you can adjust to an specific project in case you need it.
-Is one of the learning bases of  [42 methodology,]() you are not allow to use a function that you can't make yourself.
+Is one of the learning bases of  [42 methodology,](https://github.com/Karsp/42-0_What-Where-Why) you are not allow to use a function that you can't make yourself.
 
 <a name="list-flags"></a>
 | Flags | Output |
