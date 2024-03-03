@@ -6,10 +6,18 @@
 /*   By: daviles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 20:43:46 by daviles-          #+#    #+#             */
-/*   Updated: 2023/05/19 17:59:56 by daviles-         ###   ########.fr       */
+/*   Updated: 2024/03/03 00:26:00 by daviles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libftprintf.h"
+#include "libftprintf.h"
+
+int	ft_putchar(char c, int *res)
+{
+	if (write(1, &c, 1) == -1)
+		return (-1);
+	*res = *res + 1;
+	return (*res);
+}
 
 int	ft_chkflag(char const *num_args, va_list *ptr, int *res)
 {
@@ -75,15 +83,14 @@ int	main(void)
 	c = 'A';
 	hex = -253;
 	ft_printf("\n\\\\\\  Test %%c  \\\n\n");
-	res = ft_printf("Var c %c. Quotes   %c\n", c, NULL); 
-	res2 = printf("Var c %c. Quotes   %c\n", c, NULL); 
+	res = ft_printf("Var c %c. Quotes   %c\n", c, 'l'); 
+	res2 = printf("Var c %c. Quotes   %c\n", c, 'l'); 
 	printf("INT result FT %i\n", res);
 	printf("INT result PO %i\n", res2);
 
 	ft_printf("\n\\\\\\  Test %%s  \\\n\n");
 	res = ft_printf(NULL); 
-//	res = ft_printf("Var str %s. Quotes   %s\n",  "Lorem ipsum"); 
-//	res2 = printf("Var str %s. Quotes   %s\n",  "Lorem ipsum"); 
+//	res2 = printf(NULL); 
 	printf("FT %i\n", res);
 	printf("PO %i\n", res2);
 
